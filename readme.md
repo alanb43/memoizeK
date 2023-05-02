@@ -24,4 +24,7 @@ memo_compute(add, 2, 1) # registers a miss, arguments don't match!
 ```
 
 # Installation
-Coming soon
+```
+# pip / pip3
+python3 -m pip install memoizek
+```
