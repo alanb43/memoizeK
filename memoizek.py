@@ -2,14 +2,15 @@ from typing import Any
 
 
 def list_find(list: list, to_find: Any):
-    """A handler for unfound elements when searching a list."""
     try:
-        return list.index(to_find)
+        index = list.index(to_find)
+        return index
     except ValueError:
         return -1
 
 
 class MemoizeK:
+    """A custom-sized cache for functions in Python."""
     def __init__(self, func, k):
         self.function = func
         self.K = k
@@ -44,6 +45,3 @@ class MemoizeK:
 
         self._push_to_cache(args=args, results=self.function(*args))
         return self.cached_results[0]
-
-def func(a,b):
-    return a + b
