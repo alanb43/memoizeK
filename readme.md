@@ -1,6 +1,12 @@
-## MemoizeK
+# MemoizeK
 
-A (very) simple adjustable cache in Python. A cache 'hit' is registered when the arguments to your function match exactly, so for example:
+An adjustable memoization library in Python that only caches the results from the K most recent arguments.
+
+# Rationale
+
+I ([@alanb43](https://github.com/alanb43)) got the inspiration from [memoize-one](https://github.com/alexreardon/memoize-one) in TypeScript, but I really wanted to use this as an excuse to learn about packages in python + getting a package on https://pypi.org/.
+
+# Usage
 
 ```python
 from memoizek import MemoizeK
@@ -17,4 +23,5 @@ memo_compute(add, 1, 2) # registers a hit, returns cached value
 memo_compute(add, 2, 1) # registers a miss, arguments don't match!
 ```
 
-I ([@alanb43](https://github.com/alanb43)) wanted to make this for use in a project, but also as an excuse to learn about packages in python + getting a package on https://pypi.org/. The repo will reflect the release when it's up!
+# Installation
+Coming soon
