@@ -17,7 +17,7 @@ def compute(func, *args):
 def add(a,b):
     return a + b
 
-memo_compute = MemoizeK(compute, 2)
+memo_compute = MemoizeK(compute, 2) # remember 2 most-recent-calls' arguments
 memo_compute(add, 1, 2) # registers a miss, returns 3
 memo_compute(add, 1, 2) # registers a hit, returns cached value
 memo_compute(add, 2, 1) # registers a miss, arguments don't match!
